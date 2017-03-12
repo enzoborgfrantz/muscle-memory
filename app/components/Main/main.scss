@@ -1,0 +1,35 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+$Raleway: 'Raleway';
+$thatRed: #ff5959;
+
+.main {
+    font-family: $Raleway;
+    display: flex;
+
+    .content-container {
+        flex: 1;
+        padding:0 50px;
+        h1 {
+            text-align: left;
+            padding-top: 40px;
+            color: #ff5959;
+        }
+
+        input[type="date"] {
+            color: #ff5959;
+            width: 100%;
+            font-family: $Raleway;
+            font-size: 15px;
+            border: none;
+            border-bottom: 1px solid lightgrey;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            outline: none;
+        }
+    }
+
+    .planner-container {
+        flex: 2;
+    }
+}

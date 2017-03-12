@@ -1,0 +1,46 @@
+$dayHeight: 80px;
+$dayWidth: 90px;
+@mixin setColor($color) {
+    border-color: $color;
+    transition: all 0.1s ease-in;
+
+    &:hover {
+        // background-color:$color;
+        background-color: white;
+        transform: scale(2);
+        opacity: 1;
+    }
+}
+
+.planner {
+    margin: 25px auto;
+    padding-right:25px;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.65);
+
+    thead {}
+
+    tbody {
+        th {
+            // border:1px solid black;
+            padding: 5px 0 0 5px;
+            width: $dayWidth;
+            height: $dayHeight;
+            vertical-align: top;
+            border: 1px solid;
+        }
+
+        .month-day {
+            //border-color: ;
+            @include setColor(#4cf4e5);
+        }
+
+        .non-month-day {
+            @include setColor(#efefef);
+        }
+
+        .today {
+            @include setColor(#ff5959);
+        }
+    }
+}
