@@ -15,7 +15,7 @@ class Planner extends Component {
               .map(w => <tr>{ w
               .map(d =>
                 <th className={d.month() !== new Date().getMonth() ? 'non-month-day' : (d.date() === new Date().getDate()) ? 'today' : 'month-day'}>
-                  {d.date()}</th>)}
+                  <span>{d.date()}</span></th>)}
               </tr>)}
           </tbody>
         </table>

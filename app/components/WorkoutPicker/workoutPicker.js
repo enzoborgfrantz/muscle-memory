@@ -3,7 +3,7 @@ import Exercises from '../../modules/Exercise.module';
 import styles from './workoutPicker.scss';
 
 function clickMe(e) {
-  e.target.classList.toggle('muscle-group-show-children')
+  e.target.classList.toggle('muscle-group-show-children');
 }
 
 class WorkoutPicker extends Component {

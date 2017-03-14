@@ -10,7 +10,7 @@ $thatRed: #ff5959;
         flex: 1;
         padding:0 50px;
         h1 {
-            text-align: left;
+            text-align: center;
             padding-top: 40px;
             color: #ff5959;
         }
@@ -32,4 +32,8 @@ $thatRed: #ff5959;
     .planner-container {
         flex: 2;
     }
+}
+
+input[type=date]{
+  display:none;
 }
