@@ -1,24 +1,27 @@
 import React, { Component } from 'react';
 import * as Calendar from '../../modules/Calendar.module';
 import styles from './datePicker.scss';
+import DatePickerCalendar from './datePickerCalendar';
 
 class DatePicker extends Component {
+  constructor() {
+    super();
+    this.state = { showCalendar: false, date: new Date().toLocaleDateString() };
+    this.showCalendar = this.showCalendar.bind(this);
+    this.hideCalendar = this.hideCalendar.bind(this);
+  }
+
+  showCalendar() {
+    this.setState({ showCalendar: true });
+  }
+  hideCalendar() {
+    this.setState({ showCalendar: false });
+  }
   render() {
     return (
       <div>
-        <table className="date-picker">
-          <thead>
-            <tr>{Object.keys(Calendar.getWeekdaysShort).map(d => <th key={d}>{d}</th>)}</tr>
-          </thead>
-          <tbody>
-            {Calendar.getMonthCalendar()
-              .map(w => <tr>{ w
-              .map(d =>
-                <th>
-                  <span className={d.month() !== new Date().getMonth() ? 'non-month-day' : (d.date() === new Date().getDate()) ? 'today' : 'month-day'}>{d.date()}</span></th>)}
-              </tr>)}
-          </tbody>
-        </table>
+        <input type="text" className="date-picker-input" placeholder={this.state.date} onClick={this.showCalendar} onBlur={this.hideCalendar} />
+        { this.state.showCalendar ? <DatePickerCalendar /> : null }
       </div>
     );
   }

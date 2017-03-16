@@ -1,80 +1,22 @@
-@mixin setColor($color) {
-    transition: all 0.1s ease-in;
-    background-color: $color;
-    opacity: 0.65;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    transition: all .2s ease-in;
-    &:hover {
-        // background-color:$color;
-        //background-color: white;
-        background-color: $color;
-        opacity: 0.9;
-        box-shadow: inset 0 -1px 0 rgba(27,31,35,0.12);
-        cursor: pointer;
-    }
-}
+@import '../../styles/variables.scss';
 
-.date-picker {
-  margin:0px auto;
-    font-size: 12px;
-    border-collapse: collapse;
+.date-picker-input{
+  color: #5a5a5a;
+  letter-spacing: 1px;
+  font-size:14px;
+  display:block;
+  width:23%;
+  outline:none;
+  border:none;
+  border-bottom:2px solid $light-shadow-gray;
+  height:20px;
+  padding-left: 10px;
+  margin-bottom: 5px;
+  transition: all .25s linear;
+  opacity: 0.8;
 
-    thead {
-        tr {
-          color: #5a5a5a;
-
-            background-color: #ff5959;
-            opacity: 0.85;
-            height: 25px;
-            th:last-child{
-              border-top-right-radius: 5px;
-              border-bottom-right-radius: 3px;
-
-            }
-            th:first-child{
-              border-top-left-radius: 5px;
-              border-bottom-left-radius: 3px;
-
-            }
-            box-shadow: inset 0 -4px 0 rgba(27,31,35,0.12);
-
-        }
-
-        th {}
-    }
-
-    tbody {
-        //background-color: white;
-        th {
-            width: 30px;
-            height: 28px;
-            line-height: 28px;
-
-            span {
-                //padding-left: 5px;
-                display: block;
-                background-color: yellow;
-                box-shadow: inset 0 -4px 0 rgba(27,31,35,0.12);
-                border-top: 2px solid rgba(0, 0, 0, 0.65);
-                border-bottom-left-radius: 5px;
-                border-bottom-right-radius: 5px;
-            }
-            //padding-top: 5px;
-            vertical-align: top;
-            border: 2px solid white;
-        }
-
-        .month-day {
-            @include setColor(#4cf4e5);
-        }
-
-        .non-month-day {
-            @include setColor(#efefef);
-        }
-
-        .today {
-            @include setColor(#ff5959);
-        }
-    }
+  &:focus{
+    opacity: 0.9;
+    border-color:$light-red;
+  }
 }
