@@ -9,7 +9,8 @@
     }
 
     span {
-        background-color: $light-red;
+        background-color: $theme-rust;
+        cursor: pointer;
         box-sizing: border-box;
         padding: 5px;
         color: white;

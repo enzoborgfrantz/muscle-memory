@@ -4,18 +4,34 @@ import styles from './main.scss';
 import WorkoutPicker from '../WorkoutPicker/workoutPicker';
 import DatePicker from '../DatePicker/datePicker';
 import MuscleGroups from '../../modules/MuscleGroups.module';
+import UserProfile from '../UserProfile/userProfile';
+import Menu from '../Menu/menu';
 
 class Main extends Component {
   render() {
     return (
       <div className="main">
-        <div className="content-container">
-          <h1>Muscle Memory</h1>
-          <DatePicker />
-          <WorkoutPicker muscleGroups={MuscleGroups} />
+        <div className="header">
+          <div className="header-left">
+            <h1>Muscle Memory</h1>
+            <div className="menu">
+              <Menu menuItems={['Home', 'Planner']} />
+            </div>
+          </div>
+          <div className="header-right">
+            <div className="user-profile">
+              <UserProfile streak="3" username="enzoborgfrantz" profilePicture="http://lucasparker.ca/wp-content/uploads/2015/08/about-011.jpg" />
+            </div>
+          </div>
         </div>
-        <div className="planner-container">
-          <Planner />
+        <div className="content">
+          <div className="content-left">
+            <DatePicker />
+            <WorkoutPicker muscleGroups={MuscleGroups} />
+          </div>
+          <div className="content-right">
+            <Planner />
+          </div>
         </div>
       </div>
     );

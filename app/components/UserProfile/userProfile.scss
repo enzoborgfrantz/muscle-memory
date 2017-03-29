@@ -1,0 +1,28 @@
+@import '../../styles/variables.scss';
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    //color: $theme-rust;
+    color:white;
+    justify-content: flex-end;
+    img {
+        //flex: 1;
+        border-radius: 50%;
+        height: 65%;
+        width: auto;
+    }
+
+    .username {
+        //flex: 6;
+        padding-left: 15px;
+        text-align: left;
+    }
+
+    .streak {
+        //flex: 2;
+        padding-left: 50px;
+        text-align: center;
+    }
+}

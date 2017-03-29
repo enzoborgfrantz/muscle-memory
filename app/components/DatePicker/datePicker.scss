@@ -4,17 +4,16 @@
   color: #5a5a5a;
   letter-spacing: 1px;
   font-size:14px;
-  display:block;
-  width:23%;
+  box-sizing: border-box;
+  width:100%;
   outline:none;
   border:none;
   border-bottom:2px solid $light-shadow-gray;
   height:20px;
-  padding-left: 10px;
-  margin-bottom: 5px;
   transition: all .25s linear;
   opacity: 0.8;
-
+  margin:10px 0;
+  padding:0 5px;
   &:focus{
     opacity: 0.9;
     border-color:$light-red;

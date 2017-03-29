@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 $dayHeight: 80px;
 $dayWidth: 90px;
 @mixin setColor($color) {
@@ -28,8 +30,7 @@ $dayWidth: 90px;
 }
 
 .planner {
-    margin: 25px auto;
-    padding-right: 25px;
+    margin: 0 auto;
     text-align: left;
     color: rgba(0, 0, 0, 0.65);
 
@@ -50,7 +51,7 @@ $dayWidth: 90px;
 
         .month-day {
             //border-color: ;
-            @include setColor(#4cf4e5);
+            @include setColor($theme-blue);
         }
 
         .non-month-day {
@@ -58,7 +59,7 @@ $dayWidth: 90px;
         }
 
         .today {
-            @include setColor(#ff5959);
+            @include setColor($theme-rust);
         }
     }
 }

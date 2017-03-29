@@ -20,7 +20,7 @@ class DatePicker extends Component {
   render() {
     return (
       <div>
-        <input type="text" className="date-picker-input" placeholder={this.state.date} onClick={this.showCalendar} onBlur={this.hideCalendar} />
+        <input type="text" className="date-picker-input" placeholder={`Workout Date: ${this.state.date}`} onClick={this.showCalendar} onBlur={this.hideCalendar} />
         { this.state.showCalendar ? <DatePickerCalendar /> : null }
       </div>
     );
