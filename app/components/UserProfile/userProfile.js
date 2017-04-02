@@ -7,8 +7,9 @@ class UserProfile extends Component {
     return (<div className="user-profile">
       <img src={this.props.profilePicture} />
       <label className="username">{this.props.username}</label>
-      <label className="streak">{`${this.props.streak}`}</label>
-      <Heart />
+      <div className="streak">
+        <p>{`${this.props.streak}`}</p>
+      </div>
     </div>);
   }
 }

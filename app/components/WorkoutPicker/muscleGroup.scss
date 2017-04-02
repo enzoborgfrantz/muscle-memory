@@ -3,12 +3,12 @@
 .muscle-group {
     opacity: 0.85;
     transition: opacity 0.1s ease-in;
-
+    width:50%;
     &:hover {
         opacity: 1;
     }
 
-    span {
+    .mg-button {
         background-color: $theme-rust;
         cursor: pointer;
         box-sizing: border-box;

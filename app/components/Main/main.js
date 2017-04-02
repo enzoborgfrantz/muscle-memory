@@ -6,6 +6,7 @@ import DatePicker from '../DatePicker/datePicker';
 import MuscleGroups from '../../modules/MuscleGroups.module';
 import UserProfile from '../UserProfile/userProfile';
 import Menu from '../Menu/menu';
+import SavedWorkouts from '../SavedWorkouts/SavedWorkouts';
 
 class Main extends Component {
   render() {
@@ -26,11 +27,10 @@ class Main extends Component {
         </div>
         <div className="content">
           <div className="content-left">
-            <DatePicker />
-            <WorkoutPicker muscleGroups={MuscleGroups} />
+            <SavedWorkouts workouts={['Full Body', 'Upper Body and Cardio', 'Legs and Abs']} />
           </div>
           <div className="content-right">
-            <Planner />
+            <WorkoutPicker muscleGroups={MuscleGroups} />
           </div>
         </div>
       </div>

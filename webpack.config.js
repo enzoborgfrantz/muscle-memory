@@ -32,6 +32,9 @@ const config = {
       }, {
         test: /\.json$/,
         loader: 'json-loader',
+      }, {
+        test: /\.svg$/,
+        loader: 'svg-url-loader',
       },
     ],
   },

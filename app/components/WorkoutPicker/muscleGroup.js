@@ -17,7 +17,7 @@ class MuscleGroup extends Component {
   render() {
     return (
       <div className="muscle-group">
-        <span onClick={this.toggleExercises}>{this.props.name}</span>
+        <span className="mg-button" onClick={this.toggleExercises}>{this.props.name}</span>
         {this.state.showExercises ? this.props.exercises.map(e => <Exercise name={e} />) : null}
       </div>
     );
