@@ -30,7 +30,7 @@ class Main extends Component {
             <SavedWorkouts workouts={['Full Body', 'Upper Body and Cardio', 'Legs and Abs']} />
           </div>
           <div className="content-right">
-            <WorkoutPicker muscleGroups={MuscleGroups} />
+            <WorkoutPicker muscleGroups={MuscleGroups} name="New Workout" />
           </div>
         </div>
       </div>

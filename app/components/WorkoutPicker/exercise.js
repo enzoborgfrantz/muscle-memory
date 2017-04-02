@@ -1,31 +1,36 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import styles from './exercise.scss';
+import SetCounter from './setCounter';
+import Set from './set';
 
 class Exercise extends Component {
   constructor() {
     super();
-    this.addSet = this.addSet.bind(this);
+    this.showSet = this.showSet.bind(this);
+    //this.updateSetCount = this.updateSetCount.bind(this);
     this.state = {
-      showSet: false,
+      showSetCounter: false,
+      setCount: 0,
     };
   }
 
-  addSet() {
-    this.setState({ showSet: !this.state.showSet });
+  showSet() {
+    this.setState({ showSetCounter: !this.state.showSetCounter, setCount: this.state.showSetCounter ? 0 : 1 });
+  }
+
+  updateSetCount() {
+    console.log('hit');
+    this.setState({ setCount: this.state.setCount += 1 });
+    console.log('clicked');
   }
 
   render() {
     return (
       <div className="exercise">
-        <span className="exercise-name" onClick={this.addSet}>{this.props.name}</span>
-        {!this.state.showSet ? null :
-        <div className="exercise-sets">
-          sets
-          <a className="exercise-counter">-</a>
-          1
-          <a className="exercise-counter">+</a>
-        </div>
-      }
+        <span className="exercise-name" onClick={this.showSet}>{this.props.name}</span>
+        {!this.state.showSetCounter ? null : <SetCounter increment={this.updateSetCount}/>}
+        {_.range(1, this.state.setCount + 1).map(m => <Set number={m} />)}
       </div>
     );
   }
