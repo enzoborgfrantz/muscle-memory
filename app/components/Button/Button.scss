@@ -27,16 +27,17 @@
     @extend .shadow-active;
   }
 
-  &.green {
-    background-color: $theme-green;
-  }
-
-  &.red {
-    background-color: $theme-red;
-  }
-
   &.blue {
     background-color: $theme-blue;
+    &:hover{
+      @extend .dark-hover-blue;
+    }
+  }
+  &.green {
+    background-color: $theme-green;
+    &:hover{
+      @extend .dark-hover-green;
+    }
   }
 
   &.disabled {
