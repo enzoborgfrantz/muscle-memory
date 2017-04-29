@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import styles from './heart.scss';
+// import styles from './heart.scss';
 
 export default function animate() {
 

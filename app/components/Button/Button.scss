@@ -1,0 +1,53 @@
+@import '../../styles/colors.scss';
+@import '../../styles/borders.scss';
+@import '../../styles/fonts.scss';
+@import '../../styles/animations.scss';
+
+.button {
+  appearance: none;
+  outline: none;
+  color: white;
+  background-color: white;
+  border-radius: $border-radius;
+  border: $border-style;
+  box-shadow: $shadow-full;
+  width: 100%;
+  text-align: center;
+  padding: 7.5px;
+  font-size: $font-size-s;
+  font-family: $font;
+  margin-bottom: 5px;
+
+  @extend .transition;
+
+  &:hover {
+    @extend .shadow-hover;
+  }
+
+  &:active {
+    @extend .shadow-active;
+  }
+
+  &.green {
+    background-color: $theme-green;
+  }
+
+  &.red {
+    background-color: $theme-red;
+  }
+
+  &.blue {
+    background-color: $theme-blue;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    background-color: $theme-grey;
+    &:active {
+      box-shadow: $shadow-full;
+    }
+    &:hover {
+      @extend .shadow-active;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import '../../styles/fonts.scss';
+@import '../../styles/colors.scss';
+@import '../../styles/borders.scss';
+@import '../../styles/animations.scss';
+
+.text-input {
+    color:$theme-red;
+    width:100%;
+    outline:none;
+    border: $border-style;
+    font-size: $font-size-xl;
+    padding-left: 3px;
+    padding-bottom: 3px;
+    font-family: $font;
+    font-weight: bold;
+    &::placeholder {
+      color:#8e8e8e;
+    }
+}
+
+.underline {
+  border: 1px solid;
+  @extend .transition;
+
+    &.visible {
+      width:100%;
+      border-color: $theme-red;
+    }
+    &.hidden {
+      width:0;
+      border-color: transparent;
+    }
+}

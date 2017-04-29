@@ -17,9 +17,9 @@ class Workout extends Component {
   render() {
     return (
       <div className="workout">
-        {this.props.name}
-        <a className="workout-btn delete" onClick={this.deleteWorkout}> × </a>
+        <span>{this.props.name}</span>
         <a className="workout-btn edit" onClick={this.editWorkout}> edit </a>
+        <a className="workout-btn delete" onClick={this.deleteWorkout}> × </a>
       </div>
     );
   }

@@ -28,7 +28,7 @@ const config = {
         loader: 'file-loader',
       }, {
         test: /\.scss$/,
-        loader: 'style-loader!css-loader!sass-loader!',
+        loader: 'style-loader!css-loader!sass-loader!postcss-loader',
       }, {
         test: /\.json$/,
         loader: 'json-loader',
@@ -38,6 +38,10 @@ const config = {
       },
     ],
   },
+
+  postcss: [
+    require('autoprefixer'),
+  ],
 };
 
 module.exports = config;

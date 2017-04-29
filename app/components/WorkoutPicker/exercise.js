@@ -29,8 +29,6 @@ class Exercise extends Component {
     return (
       <div className="exercise">
         <span className="exercise-name" onClick={this.showSet}>{this.props.name}</span>
-        {!this.state.showSetCounter ? null : <SetCounter increment={this.updateSetCount}/>}
-        {_.range(1, this.state.setCount + 1).map(m => <Set number={m} />)}
       </div>
     );
   }

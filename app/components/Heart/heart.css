@@ -1,7 +1,8 @@
 $heart-size: 1vw;
 $heart-color: rgba(255, 0, 0, 1);
 $posY: 93.5vh;
-$posX: 86vw-$heart-size/2; //calc(#{50-$heart-size/2});
+$posX: 86vw-$heart-size/2;
+
 @mixin rotate($deg) {
     -webkit-transform: rotate($deg);
     -moz-transform: rotate($deg);
@@ -46,7 +47,6 @@ $posX: 86vw-$heart-size/2; //calc(#{50-$heart-size/2});
 
 .heart-button {
     @extend .heart;
-    //animation: pulse 1s ease infinite;
     @keyframes pulse {
         0% {
             transform: scale(1) rotate(45deg);
