@@ -7,6 +7,9 @@ import MuscleGroups from '../../modules/MuscleGroups.module';
 import UserProfile from '../UserProfile/userProfile';
 import Menu from '../Menu/menu';
 import SavedWorkouts from '../SavedWorkouts/SavedWorkouts';
+import BarListItem from '../BarListItem/BarListItem';
+import exerciseData from '../../data/exercises.data';
+import TextInput from '../TextInput/TextInput';
 
 class Main extends Component {
   render() {
@@ -30,7 +33,16 @@ class Main extends Component {
             <SavedWorkouts workouts={['Full Body', 'Upper Body and Cardio', 'Legs and Abs']} />
           </div>
           <div className="content-right">
-            <WorkoutPicker muscleGroups={MuscleGroups} name="New Workout" />
+            <TextInput placeholder="New Workout" />
+            <br />
+            {
+              Object.keys(exerciseData).map(m =>
+                <BarListItem
+                  head={m}
+                  items={exerciseData[m].exercises}
+                  key={m}
+                />)
+            }
           </div>
         </div>
       </div>

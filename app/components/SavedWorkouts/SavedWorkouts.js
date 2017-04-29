@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styles from './SavedWorkouts.scss';
 import Workout from './Workout';
 import Button from '../Button/Button';
+import Bar from '../Bar/Bar';
 
 class SavedWorkouts extends Component {
   constructor() {
@@ -16,7 +17,7 @@ class SavedWorkouts extends Component {
       <div className="saved-workouts">
         <h3>Saved Workouts</h3>
         {this.props.workouts.map(m => <Workout name={m} />)}
-        <Button onClick={this.createWorkout} color="red">
+        <Button onClick={this.createWorkout} color="blue">
           <span>Create New Workout</span>
         </Button>
       </div>

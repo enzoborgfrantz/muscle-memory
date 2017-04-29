@@ -1,0 +1,52 @@
+@import '../../styles/borders.scss';
+@import '../../styles/fonts.scss';
+@import '../../styles/animations.scss';
+@import '../../styles/colors.scss';
+
+.bar {
+  border-radius: $border-radius;
+  padding: 5px 7.5px 7.5px 7.5px;
+  box-shadow: $shadow-full;
+  color:white;
+  font-size: $font-size-l;
+  user-select:none;
+  
+  @extend .transition;
+
+  &.red {
+    background-color: $theme-red;
+    &:hover{
+      @extend .dark-hover-red;
+    }
+  }
+  &.blue {
+    background-color: $theme-blue;
+    &:hover{
+      @extend .dark-hover-blue;
+    }
+  }
+  &.green {
+    background-color: $theme-green;
+    &:hover{
+      @extend .dark-hover-green;
+    }
+  }
+  &.grey {
+    background-color: $theme-grey;
+    &:hover{
+      @extend .dark-hover-grey;
+    }
+  }
+
+  &.block {
+    display:block;
+  }
+
+  &.inline {
+    display: inline-block;
+  }
+
+  &:hover {
+    @extend .hover;
+  }
+}
